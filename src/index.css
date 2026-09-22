@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  @apply bg-surface-alt text-ink font-body antialiased;
+  overflow-x: hidden;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.container-page {
+  @apply mx-auto w-full max-w-[1280px] px-4 sm:px-6 lg:px-8;
+}
+
+.section-title {
+  @apply font-display text-xl sm:text-2xl font-bold text-ink;
+}
+
+.section-sub {
+  @apply text-sm text-ink-soft mt-1;
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center gap-2 rounded-full bg-brand-500 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-600 active:bg-brand-700 disabled:opacity-50;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center gap-2 rounded-full border border-surface-border bg-white px-5 py-2.5 text-sm font-semibold text-ink transition-colors hover:border-brand-400 hover:text-brand-600;
+}
+
+.input-base {
+  @apply w-full rounded-lg border border-surface-border px-3 py-2.5 text-sm text-ink outline-none transition-colors focus:border-brand-400 focus:ring-2 focus:ring-brand-100;
+}
+
+.card-base {
+  @apply rounded-xl2 border border-surface-border bg-white shadow-card;
+}
+
+.chip {
+  @apply inline-flex items-center rounded-full bg-surface-alt border border-surface-border px-2.5 py-1 text-xs font-medium text-ink-soft;
+}
+
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom);
+}
